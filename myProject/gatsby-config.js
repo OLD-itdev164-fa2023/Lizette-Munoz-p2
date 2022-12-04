@@ -11,12 +11,15 @@
 //Add meta data
 module.exports = {
   plugins: [
+    //Will transform markdown files into interface so it can be used in graphiql
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `notes`,
-        path: `${__dirname}/src/notes/`,
-      },
+      resolve: `gatsby-transformer-remark`,
+    },
+    {
+      resolve: `gatsby-transformer-sharp`,
+    },
+    {
+      resolve: `gatsby-plugin-sharp`,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -25,11 +28,19 @@ module.exports = {
         path: `${__dirname}/src/projects/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
   ],
   //This is an object
   siteMetadata: {
     title: "Portfolio",
     description: "Fullstack developer",
     copyright: "copyright 2022 | Lizette Munoz",
+    contact: "Lizette@gmail.com",
   },
 };
