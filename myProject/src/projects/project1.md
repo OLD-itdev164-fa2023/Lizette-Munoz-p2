@@ -1,7 +1,7 @@
 ---
 path: "/myProject/src/projects/project1.md"
-title: Third Ward Dentistry
-stack: HTML & CSS
+title: PROJECT TITLE --- Third Ward Dentistry
+stack: STACK --- HTML-CSS
 slug: Third-Ward-Dentistry
 ---
 
