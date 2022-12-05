@@ -13,9 +13,11 @@ export default function Projects({ data }) {
       <div className={styles.portfolio}>
         <h2>Portfolio</h2>
         <h3>Projects & Websites</h3>
+        <h3> ____________________</h3>
+
         <div className="=styles.projects">
           {projects.map((project) => (
-            <Link to={"/projects/" + project.frontmatter.slug} key={project.id}>
+            <Link key={project.id}>
               <div>
                 <h3>{project.frontmatter.title}</h3>
                 <p>{project.frontmatter.stack}</p>
@@ -23,7 +25,9 @@ export default function Projects({ data }) {
             </Link>
           ))}
         </div>
+        <h3>____________________</h3>
         <p>Email me at {contact} </p>
+        <h3>____________________</h3>
       </div>
     </Layout>
   );
